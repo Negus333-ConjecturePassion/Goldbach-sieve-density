@@ -25,8 +25,7 @@ Conjecture itself. The main theorem,
 `goldbach_conjecture_from_bridge`, is explicitly *conditional* on this
 unproven hypothesis, which is visible directly in its type signature.
 
-See the accompanying paper (`/paper`) for the full discussion,
-including why this gap corresponds to an open minor-arc estimate in
+See the [accompanying paper](paper/Goldbach_Sieve_Density_Framework.pdf) for the full discussion, including why this gap corresponds to an open minor-arc estimate in
 the Hardy–Littlewood circle method.
 
 ## Build status
