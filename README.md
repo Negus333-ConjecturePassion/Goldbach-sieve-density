@@ -30,10 +30,17 @@ the Hardy–Littlewood circle method.
 
 ## Build status
 
-[![Lean Build](https://github.com/YOUR-USERNAME/goldbach-sieve-density/actions/workflows/lean_build.yml/badge.svg)](https://github.com/YOUR-USERNAME/goldbach-sieve-density/actions/workflows/lean_build.yml)
+[![Lean Build](https://github.com/Negus333-ConjecturePassion/Goldbach-sieve-density/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/Negus333-ConjecturePassion/Goldbach-sieve-density/actions/workflows/lean_action_ci.yml)
 
-Built with `lake build` against Mathlib. Verified: 1944/1944 jobs,
-exit code 0, zero uses of `sorry`.
+Built with `lake build` against Mathlib.
+
+**`Goldbach/Basic.lean`** is the verified core: 1952/1952 jobs, exit code 0,
+zero `axiom` declarations, zero uses of `sorry`.
+
+**`Goldbach/Phase4b_Draft.lean`** is exploratory work restating the open gap in
+classical circle-method terms. It contains one explicitly-marked `sorry`
+(`bridge_from_circle_method`) and is not part of the verified core.
+
 
 ## Building locally
 
