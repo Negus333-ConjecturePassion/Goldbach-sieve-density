@@ -142,7 +142,7 @@ lemma prod_factors_ge_one (S : Finset ℕ) (h_all : ∀ p ∈ S, (p : ℝ) > 2) 
     1 ≤ ∏ p ∈ S, (((p : ℝ) - 1) / ((p : ℝ) - 2)) :=
   prod_factors_ge_one_aux S h_all
 
-/-- Uniform Lower Bound Lemma: Fully Proven without `sorry` -/
+/-- Uniform Lower Bound Lemma: fully proven, no proof holes -/
 lemma singular_series_lower_bound (n : ℕ) (hn : IsValidEven n) :
     2 * twinPrimeConstant ≤ singularSeries n := by
   dsimp [singularSeries]
