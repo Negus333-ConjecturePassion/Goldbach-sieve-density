@@ -1,19 +1,38 @@
+name: Build project and documentation
+
 on:
   push:
   pull_request:
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read # Read access to repository contents
-  
+  contents: read  # Read access to repository contents
+  id-token: write # Required to upload the site to GitHub Pages
+  pages: write    # Write access to GitHub Pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: leanprover/lean-action@v1
-      
+      - name: Checkout project
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Build and lint the project
+        id: build-lean
+        uses: leanprover/lean-action@v1
+
+      # API documentation is published at:
+      #   https://negus333-conjecturepassion.github.io/Goldbach-sieve-density/docs
+      # build-page is false because this project has no Jekyll site in docs/;
+      # leaving it on produces an empty root and a 404 at the site root.
+      - name: Build project documentation
+        id: build-docgen
+        uses: leanprover-community/docgen-action@main
+        with:
+          build-page: false
 
       # The verified core is Goldbach/Basic.lean. It must contain no proof
       # holes and no axioms. Goldbach/Phase4b_Draft.lean is exploratory work
