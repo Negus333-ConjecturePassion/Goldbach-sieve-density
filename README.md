@@ -57,7 +57,22 @@ zero `axiom` declarations, zero uses of `sorry`.
 
 **`Goldbach/Phase4b_Draft.lean`** is exploratory work restating the open gap in
 classical circle-method terms. It contains one explicitly-marked `sorry`
-(`bridge_from_circle_method`) and is not part of the verified core.
+(`bridge_from_circle_method`) and is not part of the verified core. It also
+proves `majorArcTerm_pos` unconditionally — `MajorArcTerm n > 0` for all
+valid even `n ≥ 8` — with zero `sorry`.
+
+**`Goldbach/Phase4c_MinorArc.lean` through `Phase4g_ExplicitN0.lean`**
+formalize the circle-method dominance chain: given
+`ErrorTermPolynomialBound`, strict minor-arc dominance follows
+unconditionally, with an explicit computable `N0`. Zero `sorry` except the
+inherited one in `Phase4b_Draft.lean`.
+
+**`Goldbach/Phase5_VaughanIdentity.lean`** formalizes Vaughan's identity
+(1977) unconditionally — zero `sorry`, zero axioms.
+
+**`Goldbach/Phase6_WeylSumBound.lean`** formalizes six of seven components
+of a Weyl-type Diophantine sum bound (Chen's Theorem 1.16) unconditionally;
+one `sorry` remains in the final assembly.
 
 
 ## Building locally
