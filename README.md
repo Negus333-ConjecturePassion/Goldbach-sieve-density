@@ -31,6 +31,21 @@ unproven hypothesis, which is visible directly in its type signature.
 See the [accompanying paper](paper/Goldbach_Sieve_Density_Framework.pdf) for the full discussion, including why this gap corresponds to an open minor-arc estimate in
 the Hardy–Littlewood circle method.
 
+
+## Numerical validation (§8.7)
+
+`paper/goldbach_validation.py` reproduces a corrected computational
+check that the singular series `S(n)` tracks true Goldbach
+representation counts across seven diverse factorizations, and that
+the Hardy–Littlewood estimate it corrects converges to within a few
+percent of the true count at every scale tested — while the naive
+Cramér model it replaces undercounts increasingly as `n` acquires
+more small prime factors. `paper/goldbach_validation_plot.png` extends
+this to 1,000 sampled values of `n` from 100 to 100,000. This is
+numerical confirmation of the known heuristic, not new evidence
+toward closing the paper's open hypothesis — see §8.7 of the paper
+for the full discussion and caveats.
+
 ## Build status
 
 [![Lean Build](https://github.com/Negus333-ConjecturePassion/Goldbach-sieve-density/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/Negus333-ConjecturePassion/Goldbach-sieve-density/actions/workflows/lean_action_ci.yml)
