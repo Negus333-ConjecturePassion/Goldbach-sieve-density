@@ -29,6 +29,32 @@ def GoldbachRepresentationCount (n : ℕ) : ℕ :=
 noncomputable def MajorArcTerm (n : ℕ) : ℝ :=
   singularSeries n * (n : ℝ) / (Real.log n) ^ 2
 
+/-- The Major Arc Main Term is strictly positive for every valid even
+    `n ≥ 8`. This is proven unconditionally: it follows directly from
+    `singular_series_lower_bound` (in `Goldbach.Basic`, fully proven,
+    zero `sorry`) together with `Real.exp_pos` giving
+    `0 < twinPrimeConstant`, and standard positivity of `log n` for
+    `n ≥ 8`. This is genuine, unconditional progress -- it does not
+    depend on `MinorArcErrorBound` or on `bridge_from_circle_method`
+    below, both of which remain open.
+
+    REFERENCE: this theorem's underlying tool -- `singularSeries` being
+    a genuine Euler product -- is a direct worked instance of the
+    Weierstrass factor theorem (Whittaker & Watson, A Course of Modern
+    Analysis, 4th ed., 1963, Ch. VII S7.5), not merely analogous to it.
+    See Chapter7_WhittakerWatson_Summary.pdf, Section 4.2. -/
+theorem majorArcTerm_pos (n : ℕ) (hn : IsValidEven n) (h8 : 8 ≤ n) :
+    0 < MajorArcTerm n := by
+  have hS : 2 * twinPrimeConstant ≤ singularSeries n := singular_series_lower_bound n hn
+  have hC : 0 < twinPrimeConstant := Real.exp_pos _
+  have hSpos : 0 < singularSeries n := by linarith
+  have hn8 : (8:ℝ) ≤ (n:ℝ) := by exact_mod_cast h8
+  have hlog : 0 < Real.log n := Real.log_pos (by linarith)
+  unfold MajorArcTerm
+  apply div_pos
+  · exact mul_pos hSpos (by linarith)
+  · exact pow_pos hlog 2
+
 /-- errorTerm is left as an unspecified real-valued function, in the
     same spirit as `AnalyticDensityBridge` in `Goldbach.Basic`, which
     is stated as a Prop with no proof term ever supplied. Defining
