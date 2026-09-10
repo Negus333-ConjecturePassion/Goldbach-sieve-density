@@ -25,11 +25,11 @@ The result combines:
 - rigorous Python-FLINT/Arb interval computation for the finite range, and
 - Lean 4 verification of the structural displacement-support and core-domination bridge.
 
-The public Lean extraction is located at:
+The public Lean extraction is available in:
 
 [`Goldbach/OffDiagonalCertificate/`](Goldbach/OffDiagonalCertificate/)
 
-The accompanying paper is:
+The accompanying paper is available here:
 
 [**Explicit Uniform Off-Diagonal Positivity Certificate v3.1 (PDF)**](paper/Explicit_Uniform_Off-Diagonal_Positivity_Certificate_v3_1.pdf)
 
@@ -45,7 +45,9 @@ the displacement coordinate is
 
 `k = p + q - N`.
 
-For every even `N ≥ 56`, the three signed mod-3 off-diagonal residue imbalances are positive. Because the `M = 2` lobe-pair core contains the full prime-generated displacement support for the relevant even targets, this yields the corresponding favorable-core domination inequality.
+For every even `N ≥ 56`, the three signed mod-3 off-diagonal residue imbalances are positive.
+
+Because the `M = 2` lobe-pair core contains the full prime-generated displacement support for the relevant even targets, this yields the corresponding favorable-core domination inequality.
 
 This is an off-diagonal theorem: the zero-displacement fiber `k = 0` is not supplied by this result.
 
@@ -64,13 +66,13 @@ The verification covered **227,472 even targets**, with:
 - zero ambiguous cases, and
 - zero failures.
 
-These computations certify the finite portion of the off-diagonal theorem; they are not Lean computations.
+These computations certify the finite portion of the off-diagonal theorem. They are not Lean computations.
 
 ### Lean 4 structural verification
 
 The public Lean package verifies the structural part of the argument, including:
 
-- the prime-support finset,
+- prime-support finsets,
 - ordered prime-support pairs,
 - displacement `k = p + q - N`,
 - the equivalence between zero displacement and the Goldbach representation fiber,
@@ -79,7 +81,7 @@ The public Lean package verifies the structural part of the argument, including:
 - the full-support lobe-window argument for even targets, and
 - the implication from positive signed imbalance to favorable-core domination.
 
-The public extraction currently builds successfully with:
+The public extraction has successfully built with:
 
 **3000/3000 jobs completed.**
 
@@ -103,35 +105,28 @@ The identity
 
 `k = 0 ↔ p + q = N`
 
-shows why the distinction matters: an actual Goldbach representation lies on the zero-displacement fiber, whereas the theorem established here concerns the off-diagonal contribution.
+shows why this distinction matters: an actual Goldbach representation lies on the zero-displacement fiber, whereas the theorem established here concerns the off-diagonal contribution.
 
-Accordingly, a separate quantitative lower bound for the complementary major-side contribution remains an independent mathematical gate before the present framework could imply Binary Goldbach.
+A separate quantitative lower bound for the complementary major-side contribution remains an independent mathematical gate before the present framework could imply Binary Goldbach.
 
-The public Lean extraction should also not be interpreted as a Lean formalization of the entire paper. The explicit prime-distribution estimates and the Arb finite verification are established outside Lean; Lean verifies the structural bridge connecting the displacement geometry and the core-domination implication.
+The public Lean extraction should not be interpreted as a Lean formalization of the entire paper. The explicit prime-distribution estimates and Arb finite verification are established outside Lean; Lean verifies the structural bridge connecting the displacement geometry and core-domination implication.
 
 ## Earlier sieve-density foundation
 
-The repository also retains the earlier sieve-density formalization, including:
+The repository retains the earlier sieve-density formalization, including:
 
 - base cases for small even integers,
 - non-emptiness of a `{2,3}`-filtered candidate offset set,
 - a uniform lower bound for the Hardy-Littlewood singular series, and
 - subsequent exploratory circle-method, Vaughan-identity, Weyl-sum, and sieve developments.
 
-These files document the development path of the project and provide mathematical infrastructure for the broader research program.
-
-## Build locally
-
-```bash
-lake exe cache get
-lake build
-
+These earlier files document the development path of the project and provide mathematical infrastructure for the broader research program.
 
 ## Building locally
+
 ```bash
 lake exe cache get
 lake build
-```markdown
 
 ## License
 
