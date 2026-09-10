@@ -4,7 +4,6 @@
 
 **This repository does NOT prove Goldbach's Conjecture.**
 
-**This repository does NOT prove Goldbach's Conjecture.**
 ## New result: Explicit Uniform Off-Diagonal Positivity Certificate
 
 This repository now includes a separately established off-diagonal
