@@ -11,7 +11,7 @@ This repository contains a developing formal and computational research framewor
 
 ## New result: Explicit Uniform Off-Diagonal Positivity Certificate
 
-The repository now includes the accompanying v3.1 paper:
+The repository now includes the accompanying v3.2 paper:
 
 **An Explicit Uniform Off-Diagonal Positivity Certificate in a Displacement Coordinate for a Binary Goldbach Circle-Method Specialization**
 
@@ -31,7 +31,10 @@ The public Lean extraction is available in:
 
 The accompanying paper is available here:
 
-[**Explicit Uniform Off-Diagonal Positivity Certificate v3.1 (PDF)**](paper/Explicit_Uniform_Off-Diagonal_Positivity_Certificate_v3_1.pdf)
+[**Explicit Uniform Off-Diagonal Positivity Certificate v3.2 (PDF)**](paper/Explicit_Uniform_Off-Diagonal_Positivity_Certificate_v3_2.pdf)
+
+[**LaTeX source for v3.2**](paper/Explicit_Uniform_Off-Diagonal_Positivity_Certificate_v3_2.tex)
+
 
 ## What is actually established
 
