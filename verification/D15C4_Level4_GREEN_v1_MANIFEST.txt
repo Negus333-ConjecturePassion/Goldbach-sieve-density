@@ -1,0 +1,21 @@
+D15C4 LEVEL-4 GREEN FREEZE
+Date: 2026-09-19
+Build: 8775/8775 jobs
+
+IndependentCrossingSourceAttack.lean
+SHA256: 3E5A230935A2F24AC58B7F2EECE0599186BCB1F6FC6414CE54B9089E44054EF0
+
+IndependentCrossingStrike.lean
+SHA256: 5EA84CAD1EE81A31E7357F873C41260295FAE3D3F02949B87FCCCA9A1399552F
+
+D15C4_Level4_GREEN_v1_build.txt
+SHA256: B862D8D1D497E363727D7AED39CB6F517F8D00837B3861D35A7A6D61090A2F12
+
+Headline theorem:
+d15c4_phaseA_INDEPENDENT_LEVEL4_of_exactRemainderBudget
+  : D15C4CLevel4Crossing
+
+Status:
+Level-4 closure GREEN.
+No sorryAx in audited Level-4 theorem chain.
+Remaining analytic obligations are source/prefix/per-N budget discharge.
