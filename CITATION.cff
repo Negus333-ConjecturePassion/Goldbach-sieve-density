@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the working preprint when referring to this M3C manuscript."
+type: article
+title: "On Signed Möbius Correlations in a Binary Goldbach Research Framework"
+authors:
+  - family-names: Stamp
+    given-names: Gregory C.
+date-released: 2026-11-08
+version: "2.3"
+license: CC-BY-4.0
+abstract: "Working preprint on signed Möbius correlations and a frozen selected-strip M3C model; Component 2 and Binary Goldbach remain open."
