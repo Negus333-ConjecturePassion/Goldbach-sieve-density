@@ -3,6 +3,7 @@
 **Author:** Dr. Gregory C. Stamp  
 **Version:** 2.3 (November 2026)  
 **Status:** Working preprint for public mathematical examination; not peer reviewed.
+DOI: https://doi.org/10.5281/zenodo.24052541
 
 This manuscript documents exact identities and classical-input estimates for the **explicitly frozen H1/H4B1/M2A selected three-prime model**. It does **not** establish Component 2, the historical H1 equivalence, the required FI-to-Binary-Goldbach bridge, or Binary Goldbach. No claim of mathematical novelty or independent human refereeing is made.
 
